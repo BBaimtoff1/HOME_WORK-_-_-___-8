@@ -7,6 +7,10 @@ public class Magic extends Hero {
 
     @Override
     public void applySuperPower(Boss boss, Hero[] heroes) {
+        int boost = RPG_Game.random.nextInt(15) + 1 ;
+        for (int i = 0; i < heroes.length; i++) {
+            heroes[i].setDamage(heroes[i].getDamage() + boost );
+            System.out.println("Маг увеличил атаку героям");
 
     }
 }
